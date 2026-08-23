@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <title>Start App</title>
   <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="manifest.json">
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js')
+      .then(reg => console.log('PWAFUNCTION :: PWA REGISTRED SUCESSFULY WITH 0', reg.scope));
+  }
+</script>
   <script>
     window.onload = function() {
       const isPWA = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
