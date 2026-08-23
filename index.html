@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Start App</title>
-        <link rel="manifest" href="manifest.json">
-    <script>
-        window.onload = function() {
-            const isPWA = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
-
-            if (isPWA) {
-               <pre>...</pre>
-                }, 50);
-            } else {
-                console.log("Please install PWA to work.");
-            }
-        };
-    </script>
+  <meta charset="UTF-8">
+  <title>Start App</title>
+  <link rel="manifest" href="manifest.json">
+  <script>
+    window.onload = function() {
+      const isPWA = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+      if (isPWA) {
+        console.log("PWA is open.");
+      } else {
+        console.log("Please install PWA to work.");
+      }
+    };
+  </script>
 </head>
 <body style="background: #ffffff; font-family: sans-serif; padding: 20px;">
-
-    <h1>Start App</h1>
-    <p>Please install Start App PWA</p>
-    <p>to use, create an rotine and select if the PWA is open.</p>
-    <p>Before donwloading close and open again. If this mensage still apearing please report this bug</p>
-
+  <h1>Start App</h1>
+  <p>Please install Start App PWA</p>
+  <p>To use, create a routine and select if the PWA is open.</p>
+  <p>Before downloading, close and open again. If this message still appears, please report this bug.</p>
 </body>
 </html>
