@@ -9,13 +9,7 @@
             const isPWA = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
 
             if (isPWA) {
-                window.open('', '_self').close();
-                window.close();
-
-                setTimeout(function() {
-                    document.open();
-                    document.write('');
-                    document.close();
+               <br>
                 }, 50);
             } else {
                 console.log("Please install PWA to work.");
