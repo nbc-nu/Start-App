@@ -7,18 +7,24 @@
   <script>
     window.onload = function() {
       const isPWA = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+      
       if (isPWA) {
-        console.log("PWA is open.");
-      } else {
-        console.log("Please install PWA to work.");
+        // Altera o conteúdo da página se for PWA
+        document.getElementById("app-status").innerHTML = `
+          <h1>Start App</h1>
+          <p>O aplicativo PWA foi iniciado com sucesso!</p>
+        `;
       }
     };
   </script>
 </head>
 <body style="background: #ffffff; font-family: sans-serif; padding: 20px;">
-  <h1>Start App</h1>
-  <p>Please install Start App PWA</p>
-  <p>To use, create a routine and select if the PWA is open.</p>
-  <p>Before downloading, close and open again. If this message still appears, please report this bug.</p>
+  <!-- O ID "app-status" permite que o JavaScript mude tudo o que está aqui dentro -->
+  <div id="app-status">
+    <h1>Start App</h1>
+    <p>Please install Start App PWA</p>
+    <p>To use, create a routine and select if the PWA is open.</p>
+    <p>Before downloading, close and open again. If this message still appears, please report this bug.</p>
+  </div>
 </body>
 </html>
