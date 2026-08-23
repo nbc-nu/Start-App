@@ -1,1 +1,4 @@
-# Start-App
+# Start App
+this is an WEBAPP that can start the SAMSUNG smarthings function.
+# Use
+to use it define this app when it open and the function
