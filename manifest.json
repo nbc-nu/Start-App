@@ -1,17 +1,17 @@
 {
-  "id": "/StartApp",
+  "id": "/start-app",
   "short_name": "Start App",
   "name": "Start App",
   "icons": [
     {
-      "src": "icon-192.png",
-      "type": "image/png",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://w3.org' width='192' height='192' viewBox='0 0 192 192'><rect width='100%' height='100%' fill='%23808080'/></svg>",
+      "type": "image/svg+xml",
       "sizes": "192x192",
       "purpose": "any"
     },
     {
-      "src": "icon-512.png",
-      "type": "image/png",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://w3.org' width='512' height='512' viewBox='0 0 512 512'><rect width='100%' height='100%' fill='%23808080'/></svg>",
+      "type": "image/svg+xml",
       "sizes": "512x512",
       "purpose": "any"
     }
