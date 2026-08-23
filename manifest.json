@@ -1,14 +1,14 @@
 {
-  "name": "Meu Aplicativo PWA",
-  "short_name": "Meu PWA",
+  "name": "Meu Aplicativo",
+  "short_name": "App",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "https://placeholder.com",
-      "sizes": "512x512",
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAnUlEQVR42u3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMBuDNgAAf6vFAgAAAAASUVORK5CYII=",
+      "sizes": "96x96",
       "type": "image/png"
     }
   ]
