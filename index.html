@@ -1,35 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <!-- Impede zoom e interações indesejadas na tela vazia -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Start App</title>
-   <link rel="manifest" href="manifest.json">
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js')
-      .then(reg => console.log('PWAFUNCTION :: PWA REGISTRED SUCESSFULY WITH 0', reg.scope));
-  }
-</script>
-  <script>
-    window.onload = function() {
-      const isPWA = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
-      
-      if (isPWA) {
-        // Altera o conteúdo da página se for PWA
-        document.getElementById("app-status").innerHTML = `
-        <br>
-        `;
-      }
-    };
-  </script>
+  
+  <!-- Força o modo app em tela cheia sem barras do navegador -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  
+  <link rel="manifest" href="manifest.json?v=10">
+  <style>
+    /* Tela 100% limpa, preta e sem barras de rolagem */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      overflow: hidden;
+      user-select: none; /* Impede seleção de texto acidental */
+      -webkit-user-select: none;
+    }
+  </style>
 </head>
-<body style="background: #ffffff; font-family: sans-serif; padding: 20px;">
-  <!-- O ID "app-status" permite que o JavaScript mude tudo o que está aqui dentro -->
-  <div id="app-status">
-    <h1>Start App</h1>
-    <p>Please install Start App PWA</p>
-    <p>To use, create a routine and select if the PWA is open.</p>
-    <p>Before downloading, close and open again. If this message still appears, please report this bug.</p>
-  </div>
+<body>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js?v=10', { scope: './' })
+          .then(reg => console.log('PWA Iniciado com sucesso.'))
+          .catch(err => console.error('Erro:', err));
+      });
+    }
+  </script>
 </body>
 </html>
