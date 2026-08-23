@@ -1,0 +1,15 @@
+{
+  "name": "Meu Aplicativo PWA",
+  "short_name": "Meu PWA",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "https://placeholder.com",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
