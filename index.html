@@ -2,15 +2,36 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Start App</title>
+    <title>Meu App</title>
     <script>
-        document.open();
-        document.write('');
-        document.close();
-        
-        window.open('', '_self').close();
+        window.onload = function() {
+            // Verifica se a página foi aberta dentro do PWA instalado (modo standalone)
+            const isPWA = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+
+            if (isPWA) {
+                // SE FOR PWA: Força o fechamento imediato
+                window.open('', '_self').close();
+                window.close();
+
+                // Plano B caso o motor do celular trave o fechamento físico:
+                // Apaga o conteúdo para o app não ficar aberto mostrando dados
+                setTimeout(function() {
+                    document.open();
+                    document.write('');
+                    document.close();
+                }, 50);
+            } else {
+                // SE FOR SITE NORMAL: Não faz nada e deixa o usuário navegar livremente
+                console.log("Acesso via navegador comum. Site liberado.");
+            }
+        };
     </script>
 </head>
-<body style="background: #ffffff; margin: 0;">
+<body style="background: #ffffff; font-family: sans-serif; padding: 20px;">
+
+    <h1>Bem-vindo ao Site</h1>
+    <p>Se você abrir esta página pelo navegador normal, este texto continuará aparecendo.</p>
+    <p>Se você abrir o aplicativo PWA instalado, ele tentará fechar ou sumirá na hora.</p>
+
 </body>
 </html>
