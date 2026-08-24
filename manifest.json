@@ -1,6 +1,15 @@
 {
-  "short_name": "Start App",
   "name": "Start App",
-  "display": "none",
-  "start_url": "./index.html"
+  "short_name": "Start",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "https://placeholder.com",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
