@@ -1,4 +1,3 @@
-// Nenhum cache, nenhuma interceptação. Vazio.
-self.addEventListener('install', (e) => self.skipWaiting());
-self.addEventListener('activate', (e) => self.clients.claim());
-self.addEventListener('fetch', (e) => {});
+self.addEventListener('fetch', (event) => {
+  // Não faz nada, apenas intercepta as requisições para o app funcionar offline
+});
