@@ -1,20 +1,16 @@
 {
   "name": "PWA Branco",
   "short_name": "Branco",
-  "start_url": "./index.html",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "COLE_AQUI_O_TEXTO_BASE64_DA_IMAGEM_192_COMPLETO",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "COLE_AQUI_O_TEXTO_BASE64_DA_IMAGEM_512_COMPLETO",
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ]
 }
