@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PWA Branco</title>
-    <link rel="manifest" href="manifest.json">
-    <style>
-        body { margin: 0; background: white; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PWA</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body {
+      background-color: #ffffff;
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+    }
+  </style>
 </head>
 <body>
-    <script>
-        if ('serviceWorker' in navigator) {
-            // Removeu o "./" daqui para o escopo aceitar a pasta do GitHub
-            navigator.serviceWorker.register('sw.js');
-        }
-    </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(() => console.log('Pronto'))
+        .catch((err) => console.log('Erro:', err));
+    }
+  </script>
 </body>
 </html>
