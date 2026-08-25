@@ -1,6 +1,6 @@
 {
-  "name": "PWA Branco",
-  "short_name": "Branco",
+  "name": "Start App",
+  "short_name": "Start",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
